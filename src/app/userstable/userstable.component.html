@@ -1,0 +1,30 @@
+<table  *ngIf="users.length > 1" [border] = "1">
+    <tr>
+        <th>
+            UserId
+        </th>
+        <th>
+            Id
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            body
+        </th>
+    </tr>
+    <tr *ngFor="let user of users; let o = odd ; let e = even" [ngClass]="e ? 'even' : 'odd'">
+     <td>
+        {{user.userId}}
+     </td>
+     <td>
+        {{user.id}}
+     </td>
+     <td>
+        {{user.title}}
+     </td>
+     <td>
+        {{user.body}}
+     </td>
+    </tr>
+</table>
